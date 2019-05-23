@@ -1,0 +1,64 @@
+
+version: '3.3'
+
+services: 
+  
+  users:
+    build:
+      context: ./services/users
+      dockerfile: Dockerfile.users
+    volumes:
+      - './services/users:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports: 
+      - '5000:5000'
+    depends_on:
+      - mongo
+    restart: unless-stopped
+      
+  mongo:
+    container_name: mongo
+    image: mongo
+    command: mongod --port 27019
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=naomis_cuisine
+      - MONGO_INITDB_ROOT_PASSWORD=7vXm6C3DJHGKSc9cqNwkjC54W
+    ports:
+      - '27019:27019'
+    volumes:
+      - cuisine_volume:/var/lib/db/data
+    restart: unless-stopped
+  
+  client:
+    build:
+      context: ./services/client
+      dockerfile: Dockerfile.client
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - './services/client/cuisine_client:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    depends_on:
+      - mongo
+    restart: unless-stopped
+
+  nginx:
+    build:
+      context: ./services/nginx
+      dockerfile: Dockerfile.nginx
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./services/nginx/certs/:/etc/nginx/certs/
+    command: [nginx-debug, '-g', 'daemon off;']
+    depends_on:
+      - client
+      - users
+
+volumes:
+  cuisine_volume:
+
