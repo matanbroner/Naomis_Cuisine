@@ -1,8 +1,8 @@
-const app = require("express")();
+const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const passport = require("passport");
-require('dotenv').config()
+
+const routes = require("./routes/api");
+const app = express();
 
 // Bodyparser middleware
 app.use(
@@ -11,11 +11,10 @@ app.use(
     })
   );
   app.use(bodyParser.json());
-
+  
   // DB Config
-const db = `mongodb://mongo:${process.env.MONGO_PORT}/users`;
+  const db = `mongodb://mongo:${process.env.MONGO_PORT}/users`;
 
-// Connect to MongoDB
 mongoose.connect(db, {
     "auth": { "authSource": "admin" },
     "user": process.env.MONGO_USER,
@@ -25,16 +24,6 @@ mongoose.connect(db, {
   .then(() => console.log("MongoDB successfully connected to Users"))
   .catch(err => console.log(err));
 
-// Passport middleware
-app.use(passport.initialize());
-
-// Passport config
-require("./config/passport")(passport);
-
-// Main routes
-app.use("/api", require('./routes/main'));
-
-
-const port = process.env.PORT || 5000;
+  const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Users Service up and running on port ${port}`))

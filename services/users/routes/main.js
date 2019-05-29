@@ -112,24 +112,23 @@ router.post('/login', (req, res) => {
     })
 })
 
-router.post('/modify', 
-    passport.authenticate('jwt', {
-        session: false
-    }),
-    (req, res) => {
-        User.findOne({_id: req.body.user._id}, (err, data) => {
-            {
-                let keys = Object.keys(req.body.user).filter(k => k !== '_id')
-            keys.forEach(key => {
-                data[key] = req.body.user[key]
+router.post('/forgot_password', (req, res) => {
+    const { username } = req.body
+    User.findOne({
+        username
+    }).then(user => {
+        if (!user)
+            return res.status(404).json({
+                usernamenotfound: "Username not found"
             })
-            data.save(err => {
-                if (err) res.status(400).json({err: 'Error modifying user', err})
-                else res.status(200).json({mod: 'User has been modified.'})
-            })
+
+            else{
+                
             }
         })
-    })
+
+})
+
 
 router.get('/auth',
     passport.authenticate('jwt', {

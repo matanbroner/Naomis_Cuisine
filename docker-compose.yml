@@ -11,7 +11,37 @@ services:
       - './services/users:/usr/src/app'
       - '/usr/src/app/node_modules'
     ports: 
-      - '5000:5000'
+      - '5700:5700'
+    depends_on:
+      - mongo
+    restart: unless-stopped
+
+  menus:
+    build:
+      context: ./services/menus
+      dockerfile: Dockerfile.menus
+    ports:
+      - '6000:6000'
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - './services/menus:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    depends_on:
+      - mongo
+    restart: unless-stopped
+  
+  orders:
+    build:
+      context: ./services/orders
+      dockerfile: Dockerfile.orders
+    ports:
+      - '6700:6700'
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - './services/orders:/usr/src/app'
+      - '/usr/src/app/node_modules'
     depends_on:
       - mongo
     restart: unless-stopped
@@ -21,7 +51,7 @@ services:
     image: mongo
     command: mongod --port 27019
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=naomis_cuisine
+      - MONGO_INITDB_ROOT_USERNAME=naomis-cuisine
       - MONGO_INITDB_ROOT_PASSWORD=7vXm6C3DJHGKSc9cqNwkjC54W
     ports:
       - '27019:27019'
