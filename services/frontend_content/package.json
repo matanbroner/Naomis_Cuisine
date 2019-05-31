@@ -1,5 +1,5 @@
 {
-  "name": "orders",
+  "name": "frontend_content",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -10,11 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cryptr": "^4.0.2",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "mongoose": "^5.4.22",
-    "body-parser": "^1.18.3",
-    "request": "^2.88.0"
+    "body-parser": "^1.18.3"
   }
 }

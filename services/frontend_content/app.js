@@ -1,7 +1,6 @@
 const app = require("express")();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const passport = require("passport");
 require('dotenv').config()
 
 // Bodyparser middleware
@@ -13,7 +12,7 @@ app.use(
   app.use(bodyParser.json());
 
   // DB Config
-const db = `mongodb://mongo:${process.env.MONGO_PORT}/orders`;
+const db = `mongodb://mongo:${process.env.MONGO_PORT}/frontend`;
 
 // Connect to MongoDB
 mongoose.connect(db, {
@@ -27,9 +26,9 @@ mongoose.connect(db, {
 
 
 // Main routes
-app.use("/api", require('./routes/main'));
+app.use("/api", require('./routes/pages'));
 
 
-const port = process.env.PORT || 6500;
+const port = process.env.PORT || 4000;
 
-app.listen(port, () => console.log(`Orders Service up and running on port ${port}`))
+app.listen(port, () => console.log(`Frontend Content Service up and running on port ${port}`))

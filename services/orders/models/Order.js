@@ -14,12 +14,23 @@ const OrderSchema = new Schema({
             type: String
         }
     ],
+    order_total: {
+        type: Number
+    },
+    order_date:{
+        type: Date,
+        default: Date.now()
+    },
     complete_date: {
         type: Date
     },
     refunded: {
         type: Boolean,
         default: false
+    },
+    comments: {
+        type: String,
+        default: ''
     }
 })
 

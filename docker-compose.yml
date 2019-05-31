@@ -58,11 +58,28 @@ services:
     volumes:
       - cuisine_volume:/var/lib/db/data
     restart: unless-stopped
+
+  frontend_content:
+    build:
+      context: ./services/frontend_content
+      dockerfile: Dockerfile.frontend
+    ports:
+      - '4000:4000'
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - './services/frontend_content:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    depends_on:
+      - mongo
+    restart: unless-stopped
   
   client:
     build:
       context: ./services/client
       dockerfile: Dockerfile.client
+      args:
+        app_env: 'development'
     ports:
       - '3000:3000'
     environment:
@@ -72,6 +89,7 @@ services:
       - '/usr/src/app/node_modules'
     depends_on:
       - mongo
+      - frontend_content
     restart: unless-stopped
 
   nginx:
