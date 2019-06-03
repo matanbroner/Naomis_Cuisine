@@ -1,0 +1,18 @@
+#wrapper{
+    height: 200vh;
+    margin-top: 100px;
+}
+
+#logoWrapper{
+    height: 700px;
+}
+
+#logo{
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: url('../../assets/photos/logo.png');
+    margin: auto;
+    height: 550px;
+    display:block;
+    margin: 7% auto;
+}

@@ -1,0 +1,24 @@
+{
+    "eng": {
+        "title": "Our Menu",
+        "subtitle": "Come see what's cooking!",
+        "days": {
+            "monday": "M",
+            "tuesday": "T",
+            "wednesday": "W",
+            "thursday": "Th",
+            "Friday": "F"
+        }
+    },
+    "heb": {
+        "title": "התפריט שלנו",
+        "subtitle": "בואו תראו מה הולך במטבח שלנו!",
+        "days": {
+            "monday": "א",
+            "tuesday": "ב",
+            "wednesday": "ג",
+            "thursday": "ד",
+            "Friday": "ה"
+        }
+    }
+}

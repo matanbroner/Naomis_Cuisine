@@ -51,5 +51,6 @@ function* loginWorker(action) {
     // redirect to home route after successful login
   } catch (e) {
     yield put(loginFailed(e.body.msg))
+    yield put(loadingOff());
   }
 }

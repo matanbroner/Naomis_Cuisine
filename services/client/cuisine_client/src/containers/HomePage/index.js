@@ -1,33 +1,35 @@
 import React from 'react'
-import { connect } from 'react-redux';
+import { Parallax, Background } from 'react-parallax'
+import localStyles from './styles.module.css'
+import Loading from '../../components/Loading'
 import { setProfile } from '../../actions/User'
-
-let new_prof = {
-    name: 'Jean Boulanger'
-}
+import { connect } from 'react-redux';
 
 class HomePage extends React.Component{
+    
     render(){
         return(
-            <div>
-                Home Page!
-                <button onClick={() => {
-                    this.props.dispatch(setProfile(new_prof))
-                }}>
-                    Click me for Redux!
-                </button>
-                <div>
-                    {this.props.profile.name}
-                </div>
+            <div id={localStyles.wrapper}>
+                <Parallax
+                blur={2}
+                bgImage={'https://www.discoverlosangeles.com/sites/default/files/styles/hero/public/media/restaurants/bavel_dtla_dishes.jpg?h=a1e1a043&itok=Pd84rCI2'}
+                bgImageAlt="the cat"
+                strength={1000}
+                >
+                    <div id={localStyles.logoWrapper}>
+                        <img id={localStyles.logo}/>
+                    </div>
+                </Parallax>
+                <Loading language={this.props.language}/>
             </div>
         )
     }
 }
 
-const mapStateToProps = (state) => {
-    console.log(state)
+const mapStateToProps = state => {
     return{
-        profile: state.user.profile
+        profile: state.user.profile,
+        language: state.global.language
     }
 }
 

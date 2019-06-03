@@ -1,0 +1,14 @@
+#wrapper{
+    display: flex;
+    width: 90px;
+    margin-right: 30px;
+}
+
+#flagWrapper{
+    margin: auto 10px;
+    cursor: pointer;
+}
+
+#flagWrapper:hover{
+    opacity: 0.7;
+}

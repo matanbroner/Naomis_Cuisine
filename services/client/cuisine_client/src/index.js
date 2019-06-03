@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import RootApp from './RootApp'
+require('./index.css')
 
 const render = () => {
     ReactDOM.render((

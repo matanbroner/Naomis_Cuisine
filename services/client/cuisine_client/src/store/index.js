@@ -9,6 +9,7 @@ import {
 } from 'history'
 import createSagaMiddleware from 'redux-saga';
 import { routerMiddleware } from 'connected-react-router'
+import { composeWithDevTools } from 'redux-devtools-extension'
 import rootSaga from '../sagas';
 // import {routerMiddleware} from 'react-router-redux';
 
@@ -23,7 +24,7 @@ export default function configureStore(initialState) {
     const store = createStore(
         reducers(history),
         initialState,
-        compose(applyMiddleware(...middlewares))
+        composeWithDevTools(applyMiddleware(...middlewares))
     );
 
     sagaMiddleware.run(rootSaga);

@@ -1,0 +1,22 @@
+{
+    "eng": {
+        "links": {
+            "home": "Home",
+            "about": "About",
+            "how_it_works": "How It Works",
+            "menus": "Menus",
+            "custom": "Custom Orders",
+            "profile": "Profile"
+        }
+    },
+    "heb": {
+        "links": {
+            "home": "דף הבית",
+            "about": "קצת עלינו",
+            "how_it_works": "איך מזמינים",
+            "menus": "תפריטים",
+            "custom": "הזמנות מיוחדות",
+            "profile": "פרופיל"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.incrementButton{
+    display: block;
+    border: 0;
+    transition: color 0.1s linear;
+    color: gray;
+    font-size: 15px;
+    background: 0;
+}
+
+.incrementButton:hover{
+    cursor: pointer;
+    color: #e2bbea;
+}
+
+.incrementButton:focus{
+    outline: none;
+}
+
+#incrementValue{
+    margin: 0;
+}
+
+#incrementButtonGroup{
+    height: 70%;
+    margin: 2px auto;
+}

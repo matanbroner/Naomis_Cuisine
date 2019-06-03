@@ -1,0 +1,24 @@
+{
+    "eng": {
+        "title": "Your Cart",
+        "order": {
+            "header": "Your Order",
+            "total": "Subtotal:",
+            "items": "Items",
+            "extraInfoButtonAdd": "Add Special Requests",
+            "extraInfoButtonRemove": "Close Special Requests"
+        },
+        "emptyCart": "You don't have any items in your cart yet..."
+    },
+    "heb": {
+        "title": "הסל שלך",
+        "order": {
+            "header": "הזמנה שלך",
+            "total": "סכום כולל:",
+            "items": ":פריטים",
+            "extraInfoButtonAdd": "הוסף בקשות מיוחדות",
+            "extraInfoButtonRemove": "בטל בקשות מיוחדות"
+        },
+        "emptyCart": "אין לך פריטים בסל..."
+    }
+}

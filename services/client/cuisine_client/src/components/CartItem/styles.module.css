@@ -1,0 +1,56 @@
+#wrapper{
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 100%;
+    height: fit-content;
+    margin: 15px auto;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+#itemImage{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 15%;
+    height: auto;
+    margin: 5px 5px;
+    border-radius: 10px;
+}
+
+#itemParams{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: inherit;
+    width: 40%;
+    margin: auto;
+    margin-left: 10px;
+}
+
+#itemParams > p{
+    margin: auto;
+    padding: 0 15px;
+}
+
+#itemParams > #price{
+    
+}
+
+#removeButton{
+    border: 0;
+    margin: auto;
+  
+    height: 80%;
+    color: gray;
+    cursor: pointer;
+    background: 0;
+}
+
+#removeButton:hover{
+    color: #cb0030;
+}
+
+#removeButton:focus{
+    outline: none;
+}

@@ -40,6 +40,7 @@ function* registerWorker(action) {
 
         // redirect to home route after successful register
     } catch (e) {
-        yield put(registerFailed(e.body.msg))
+        yield put(registerFailed(e.body.msg));
+        yield put(loadingOff());
     }
 }
