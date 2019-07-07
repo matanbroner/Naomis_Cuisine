@@ -2,17 +2,19 @@
     "eng": {
         "title": "Our Menu",
         "subtitle": "Come see what's cooking!",
+        "dropdownTitle": "Pick Day for Menu",
         "days": {
-            "monday": "M",
-            "tuesday": "T",
-            "wednesday": "W",
-            "thursday": "Th",
-            "Friday": "F"
+            "monday": "Monday",
+            "tuesday": "Tuesday",
+            "wednesday": "Wednesday",
+            "thursday": "Thursday",
+            "Friday": "Friday"
         }
     },
     "heb": {
         "title": "התפריט שלנו",
         "subtitle": "בואו תראו מה הולך במטבח שלנו!",
+        "dropdownTitle": "בחר/י יום",
         "days": {
             "monday": "א",
             "tuesday": "ב",

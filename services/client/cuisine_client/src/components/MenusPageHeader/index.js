@@ -1,41 +1,39 @@
 import React from 'react'
+import Col from 'react-bootstrap/Col'
 import localStyles from './styles.module.css'
 import Title from '../Title'
+import HoverDropdown from '../HoverDropdown'
 import allContent from './content.json'
 
 const MenusPageHeader = (props) => {
     const content = allContent[props.lang]
 
-    const fetchDaysButtonsWrapperStyles = () => {
-        return {
-            float: props.lang === 'heb' ? 'left' : 'right',
-            marginLeft: props.lang === 'heb' ? '10%' : '0',
-            marginRight: props.lang === 'eng' ? '10%' : '0'
+    const defaultStyles = {
+        dropdown: {
+            justifyContent: 'flex-end'
         }
     }
 
-    const renderDaysOfWeek = () => {
-        var days = Object.keys(content.days)
-        if (props.lang === 'heb') days = days.reverse()
-        return days.map(day => {
-            return(
-                <button key={day} className={localStyles.dayButton}>
-                    {content.days[day]}
-                </button>
-            )
-        })
+    const getDays = () => {
+        const keys = Object.keys(content.days)
+        return keys.map(key => content.days[key])
     }
 
     return(
+        <Col xs={11}>
         <div id={localStyles.wrapper}>
-            <div id={localStyles.daysButtonsWrapper} style={fetchDaysButtonsWrapperStyles()}>
-                {renderDaysOfWeek()}
+            <div id={localStyles.dropdown} style={defaultStyles.dropdown}>
+                <HoverDropdown 
+                title={content.dropdownTitle} 
+                right={props.lang === 'eng'} 
+                items={getDays()}/>
             </div>
             <Title 
             main={content.title}
             sub={content.subtitle} 
             dir={props.lang === 'heb' ? 'rtl' : 'ltr'}/>
         </div>
+        </Col>
     )
 }
 

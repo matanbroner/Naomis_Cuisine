@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router({mergeParams: true});
 const Schedule = require('../models/Schedule')
 
+// FETCH ACTIVE SCHEDULE
+router.get('/active')
+
 // ADD A NEW MENU IN DB
 router.post('/new', (req, res, next) => {
     let schedule = req.body
@@ -16,7 +19,7 @@ router.post('/new', (req, res, next) => {
     })
 })
 
-// MODIFY A MENU IN DB
+// MODIFY A SCHEDULE IN DB
 router.post('/modify/:id', (req, res, next) => {
     let id = req.query.id
     Schedule.find({

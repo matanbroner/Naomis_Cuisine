@@ -1,0 +1,17 @@
+#wrapper{
+    background: #db91e7;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+    border: 1.5px solid whitesmoke;
+}
+
+#wrapper:hover{
+    background: #db79e7;
+}

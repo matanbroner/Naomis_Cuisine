@@ -6,6 +6,7 @@ export const HOSTNAME = 'http://localhost'
 export const HOME_PAGE = '/'
 export const ABOUT_PAGE = '/about'
 export const MENUS_PAGE = '/menus'
+export const ADMIN_PAGE = '/admin'
 
 // Users Service
 export const USER_SERVICE_BASE = HOSTNAME + "/users"

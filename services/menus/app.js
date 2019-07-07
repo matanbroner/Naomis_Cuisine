@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParser = require('body-parser')
+require('dotenv').config()
 
 const routes = require("./routes/api");
 const app = express();
@@ -11,6 +13,8 @@ app.use(
     })
   );
   app.use(bodyParser.json());
+
+  app.use('/api', routes)
   
   // DB Config
   const db = `mongodb://mongo:${process.env.MONGO_PORT}/menus`;

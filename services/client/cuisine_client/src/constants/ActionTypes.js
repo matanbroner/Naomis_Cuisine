@@ -20,6 +20,13 @@ export const SET_ITEM_QUANTITY = 'set_item_quantity'
 export const NEW_ORDER_WATCHER = 'order-watcher'
 export const NEW_ORDER_FAILED = 'order_failed'
 
+// Item Related Action Types
+
+export const SET_ITEMS_BANK = 'set_items_bank'
+export const APPEND_ITEMS_BANK = 'append_items_bank'
+export const FETCH_ITEMS_WATCHER = 'fetch_items_watcher'
+export const CREATE_ITEM_WATCHER = 'create_items_watcher'
+
 // Page Related Action Types
 
 export const RETRIEVE_CONTAINER_TEXT = 'retrieve_container_text'

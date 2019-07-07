@@ -1,5 +1,6 @@
 import React from 'react'
 import Sidebar from "react-sidebar";
+import Notification from '../../components/Notification'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import localStyles from './styles.module.css'
@@ -43,7 +44,6 @@ class CartSidebar extends React.PureComponent{
 
     fetchPullTabStyles(){
         const direction = this.determinePullTabSide()
-        console.log(direction)
         return {
             [direction]: this.determinePullTabIndent(),
             width: window.innerWidth <= 760 ? '40px' : null
@@ -90,21 +90,22 @@ class CartSidebar extends React.PureComponent{
         })
     }
 
-    renderCartPanel(){
+    renderCartPanel(totals){
         return(
             <CartPanel
             lang={this.props.lang}
             items={this.generateItems()}
-            totals={this.calculateTotals()}
+            totals={totals}
             />
         )
     }
 
     render(){
+        const totals = this.calculateTotals()
         return(
             <div>
                 <Sidebar 
-                sidebar={this.renderCartPanel()}
+                sidebar={this.renderCartPanel(totals)}
                 open={this.props.isOpen}
                 pullRight = {this.props.lang === 'eng'}
                 shadow={false}
@@ -128,6 +129,11 @@ class CartSidebar extends React.PureComponent{
                             size={window.innerWidth <= 760 ? "2x" : "3x"} 
                             color="white" icon={faShoppingCart} 
                             flip={this.props.lang === 'heb' ? 'horizontal' : null}/>
+                    }
+                    {
+                        this.props.items.length
+                        ? <Notification count={totals.quantity}/>
+                        : null
                     }
                 </button>
             </div>

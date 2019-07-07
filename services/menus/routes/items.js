@@ -1,9 +1,13 @@
 const express = require('express');
+const AWS = require('aws-sdk');
+const multer = require('multer');
+const multerS3 = require('multer-s3');
+const uuid = require('uuid/v4')
 const router = express.Router({
     mergeParams: true
 });
 const Item = require('../models/Item')
-const authenticate = require('./auth')
+// const authenticate = require('./auth')
 
 
 AWS.config.update({
@@ -26,7 +30,7 @@ const upload = multer({
         acl: 'public-read',
         // eslint-disable-next-line
         key: function (req, file, cb) {
-            let fileId = uniqid()
+            let fileId = uuid()
             cb(null, fileId);
         },
     }),

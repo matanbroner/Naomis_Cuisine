@@ -1,0 +1,22 @@
+{
+    "eng": {
+        "title": "Administration",
+        "subtitle": "You can manage all the store's features right here!",
+        "tabs": {
+            "items": "Manage Items",
+            "menus": "Manage Menus",
+            "schedules": "Manage Schedules",
+            "orders": "Manage Orders"
+        }
+    },
+    "heb": {
+        "title": "Administration",
+        "subtitle": "You can manage all the store's features right here!",
+        "tabs": {
+            "items": "Manage Items",
+            "menus": "Manage Menus",
+            "schedules": "Manage Schedules",
+            "orders": "Manage Orders"
+        }
+    }
+}

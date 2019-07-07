@@ -3,42 +3,26 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const ItemSchema = new Schema({
-    names: [
-        {
-            language: {
-                type: String
-            },
-            content: {
-                type: String
-            }
-        }
-    ],
-    descriptions: [
-        {
-            language: {
-                type: String
-            },
-            content: {
-                type: String
-            }
-        }
-    ],
+    names: {
+        heb: String,
+        eng: String
+    },
+    descriptions: {
+        heb: String,
+        eng: String
+    },
     price: {
         type: Number,
         default: 0
     },
-    portions: {
+    serves: {
         type: Number,
         default: 1
     },
     photos: [
-        {
-            type: String
-        }
+        String
     ],
-    coverPhoto: {
-        type: String
-    }
+    coverPhoto: String
 })
 
 

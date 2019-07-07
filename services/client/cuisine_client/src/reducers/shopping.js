@@ -44,6 +44,7 @@ const shoppingInitialState = {
 };
 
 export default function shoppingReducer(state = shoppingInitialState, action) {
+    var index
     switch (action.type) {
         case CONTROL_CART:
             return {
@@ -54,14 +55,30 @@ export default function shoppingReducer(state = shoppingInitialState, action) {
                 }
             }
             case ADD_TO_CART:
-                return {
-                    ...state,
-                    cart: {
-                        ...state.cart,
-                        items: [
-                            ...state.cart.items,
-                            action.payload
-                        ]
+                index =  state.cart.items.findIndex(item => item._id === action.payload._id)
+                if (index === -1){
+                    return {
+                        ...state,
+                        cart: {
+                            ...state.cart,
+                            items: [
+                                ...state.cart.items,
+                                action.payload
+                            ]
+                        }
+                    }
+                }
+                else {
+                    let items = [...state.cart.items]
+                    items[index].quantity++
+                    return {
+                        ...state,
+                        cart: {
+                            ...state.cart,
+                            items: [
+                                ...items
+                            ]
+                        }
                     }
                 }
                 case REMOVE_FROM_CART:
@@ -73,7 +90,7 @@ export default function shoppingReducer(state = shoppingInitialState, action) {
                         }
                     }
                     case SET_ITEM_QUANTITY:
-                        const index = state.cart.items.findIndex(item => item._id === action.payload._id)
+                        index = state.cart.items.findIndex(item => item._id === action.payload._id)
                         var items = [...state.cart.items]
                         if(action.payload.quantity >= 1)
                             items[index].quantity = action.payload.quantity

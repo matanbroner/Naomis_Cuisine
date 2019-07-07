@@ -1,0 +1,22 @@
+#wrapper{
+    border-radius: 10px;
+    border-bottom: 0;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.24);
+    overflow: auto;
+}
+
+#subWrapper{
+    padding: 40px;
+    padding-bottom: 0;
+    overflow: auto;
+}
+
+#header{
+    margin-bottom: 30px;
+}
+
+#buttonWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

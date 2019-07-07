@@ -14,7 +14,6 @@ services:
       - '5700:5700'
     depends_on:
       - mongo
-    restart: unless-stopped
 
   menus:
     build:
@@ -29,7 +28,6 @@ services:
       - '/usr/src/app/node_modules'
     depends_on:
       - mongo
-    restart: unless-stopped
   
   orders:
     build:
@@ -44,7 +42,6 @@ services:
       - '/usr/src/app/node_modules'
     depends_on:
       - mongo
-    restart: unless-stopped
       
   mongo:
     container_name: mongo
@@ -57,7 +54,6 @@ services:
       - '27019:27019'
     volumes:
       - cuisine_volume:/var/lib/db/data
-    restart: unless-stopped
 
   frontend_content:
     build:
@@ -72,11 +68,10 @@ services:
       - '/usr/src/app/node_modules'
     depends_on:
       - mongo
-    restart: unless-stopped
   
   client:
     build:
-      context: ./services/client
+      context: ./services/client/cuisine_client
       dockerfile: Dockerfile.client
       args:
         app_env: 'development'
@@ -90,13 +85,11 @@ services:
     depends_on:
       - mongo
       - frontend_content
-    restart: unless-stopped
 
   nginx:
     build:
       context: ./services/nginx
       dockerfile: Dockerfile.nginx
-    restart: unless-stopped
     ports:
       - '80:80'
       - '443:443'

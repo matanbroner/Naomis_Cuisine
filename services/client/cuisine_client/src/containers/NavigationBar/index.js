@@ -6,13 +6,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     HOME_PAGE,
     ABOUT_PAGE,
-    MENUS_PAGE
+    MENUS_PAGE,
+    ADMIN_PAGE
 } from '../../constants/Url'
 import {
     changeLanguage
 } from '../../actions/Global'
 import LanguageToggler from '../../components/LanguageToggler'
+import Condition from '../../components/Condition'
 import './styles.css'
+import roles from '../../constants/Roles'
 import content from './content.json'
 import { connect } from 'react-redux';
 
@@ -40,7 +43,10 @@ class NavigationBar extends React.PureComponent{
             <Nav.Link key={routes.how_it_works} as={Link} to={HOME_PAGE}>{routes.how_it_works}</Nav.Link>,
             <Nav.Link key= {routes.menus} as={Link} to={MENUS_PAGE}>{routes.menus}</Nav.Link>,
             <Nav.Link key={routes.custom} as={Link} to={HOME_PAGE}>{routes.custom}</Nav.Link>,
-            <Nav.Link key={routes.profile} as={Link} to={HOME_PAGE}>{routes.profile}</Nav.Link>
+            <Nav.Link key={routes.profile} as={Link} to={HOME_PAGE}>{routes.profile}</Nav.Link>,
+            <Condition is={this.props.user.role === roles.ADMIN}>
+                <Nav.Link key={routes.admin} as={Link} to={ADMIN_PAGE}>{routes.admin}</Nav.Link>
+            </Condition>
         ]
         if (this.props.language === 'eng') return links
         else {

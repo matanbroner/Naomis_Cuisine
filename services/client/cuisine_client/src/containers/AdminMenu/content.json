@@ -1,0 +1,36 @@
+{
+    "eng": {
+        "items": {
+            "manage": "Manage Items",
+            "create": "Create Items",
+            "modify": "Modify Items"
+        },
+        "menus": {
+            "manage": "Manage Menus",
+            "create": "Create Menus",
+            "modify": "Modify Menus"
+        },
+        "schedules": {
+            "manage": "Manage Schedules",
+            "create": "Create Schedules",
+            "modify": "Modify Schedules"
+        }
+    },
+    "heb": {
+        "items": {
+            "manage": "ניהול מנות",
+            "create": "יצירת מנות",
+            "modify": "שינוי מנות"
+        },
+        "menus": {
+            "manage": "ניהול תפריטים",
+            "create": "יצירת תפריטים",
+            "modify": "שינוי תפריטים"
+        },
+        "schedules": {
+            "manage": "ניהול מערכות",
+            "create": "יצירת מערכות",
+            "modify": "שינוי מערכות"
+        }
+    }
+}

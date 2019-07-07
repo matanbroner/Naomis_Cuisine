@@ -5,9 +5,12 @@ import {
   REMOVE_PROFILE
 } from '../constants/ActionTypes'
 
+import roles from '../constants/Roles'
+
 const userInitialState = {
   profile: {
-    name: 'Matan'
+    name: 'Matan',
+    role: roles.ADMIN
   },
   errors: {}
 };

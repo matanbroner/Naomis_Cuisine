@@ -1,4 +1,4 @@
-const Item = require('./Item')
+const Item = require('./Item').schema
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
