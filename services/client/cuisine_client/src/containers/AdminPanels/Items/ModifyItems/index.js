@@ -5,7 +5,6 @@ import localStyles from './styles.module.css'
 import { Link } from 'react-router-dom'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import ReactSearchBox from 'react-search-box'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faPencilAlt,
@@ -13,6 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 import TitledPanel from '../../../../components/TitledPanel'
+import SearchBar from '../../../../components/SearchBar'
 import ItemForm from '../../../../components/Forms/Item'
 import PhotoUpload from '../../../../components/PhotoUpload'
 import LoadingText from '../../../../components/LoadingText'
@@ -65,7 +65,7 @@ class AdminModifyItems extends React.PureComponent{
     
     renderItems(){
         let rows = []
-        for(let j=0; j<=10; j++){
+        for(let j=0; j<=3; j++){
             let items = []
             for (let i=0; i<=5; i++){
                 items.push(
@@ -103,6 +103,11 @@ class AdminModifyItems extends React.PureComponent{
                 maxWidth: this.state.editing ? 0 : null
             }}
             >
+                <SearchBar
+                data={test_data.map(item => item.search)}
+                placeholder="Search for an item to modify"
+                onChange={v => console.log(v)}
+                lang={this.props.language}/>
                 {this.renderItems()}
             </div>
         )

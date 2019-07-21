@@ -50,7 +50,7 @@ router.get('/collection', (req, res, next) => {
     })
 })
 
-router.post('/refund/:id', (req, res, next => {
+router.post('/refund/:id', (req, res, next) => {
     let id = req.params.id
     Order.findById(id, (err, doc) => {
         if (err) return res.status(404).json({
@@ -84,4 +84,6 @@ router.post('/refund/:id', (req, res, next => {
             })
         }
     })
-}))
+})
+
+module.exports = router

@@ -34,20 +34,6 @@ const links = (lang) => {
                         link: '/menus/modify'
                     }
                 ]
-            },
-            {
-                title:  content.schedules.manage,
-                icon: <FontAwesomeIcon icon={faCalendar}/>,
-                list: [
-                    {
-                        title: content.schedules.create,
-                        link: '/schedules/create'
-                    },
-                    {
-                        title: content.schedules.modify,
-                        link: '/schedules/modify'
-                    }
-                ]
             }
         ]
     )

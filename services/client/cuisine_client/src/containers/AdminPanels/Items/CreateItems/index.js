@@ -1,7 +1,9 @@
 import React from 'react'
 import localStyles from './styles.module.css'
 import { connect } from 'react-redux'
-
+import {
+    createNewItem
+} from '../../../../actions/Items'
 import TitledPanel from '../../../../components/TitledPanel'
 import ItemForm from '../../../../components/Forms/Item'
 import PhotoUpload from '../../../../components/PhotoUpload'
@@ -43,6 +45,7 @@ class AdminCreateItem extends React.PureComponent{
 
     finalize(e){
         e.preventDefault()
+        this.props.createNewItem(this.state.form)
         this.uploader.submit()
     }
     
@@ -96,7 +99,7 @@ class AdminCreateItem extends React.PureComponent{
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
+        createNewItem: (item) => dispatch(createNewItem(item))
     }
 }
 

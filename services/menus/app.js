@@ -30,4 +30,4 @@ mongoose.connect(db, {
 
   const port = process.env.PORT || 6000;
 
-app.listen(port, () => console.log(`Users Service up and running on port ${port}`))
+app.listen(port, () => console.log(`Menus Service up and running on port ${port}`))

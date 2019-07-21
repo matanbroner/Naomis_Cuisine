@@ -15,7 +15,7 @@ class App extends React.Component{
                <CartSidebar/>
                 <Switch>
                     <Route exact path={`/`} component={HomePage} />
-                    <Route exact path={`/menus`} component={MenusPage} />
+                    <Route exact path={`/menu`} component={MenusPage} />
                     <Route path={`/admin`} component={AdminPage} />
                 </Switch>
         </React.Fragment>

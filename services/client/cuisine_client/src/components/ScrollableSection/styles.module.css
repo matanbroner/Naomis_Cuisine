@@ -1,0 +1,18 @@
+.scrolling_wrapper_flexbox {
+    flex-wrap: nowrap;
+    overflow: auto;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .card {
+    flex: 0 0 auto;
+  }
+
+  .scrolling_wrapper_flexbox {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scrolling_wrapper_flexbox > -webkit-scrollbar {
+    display: none;
+  }

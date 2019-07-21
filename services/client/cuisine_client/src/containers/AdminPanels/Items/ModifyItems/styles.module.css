@@ -3,18 +3,23 @@
     border-bottom: 0;
     box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.24);
     min-height: 100%;
+    
 }
 
 #itemsRow{
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
-    width: 100%;
+    width: 98%;
+    padding-left: 30px;
 }
 
 #itemWrapper{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5px;
 }
 
 #editButton {
@@ -47,7 +52,8 @@
     width: 100%;
     max-width: 5000px;
     transition: max-width 1s;
-    overflow: hidden;
+    height: 90vh;
+    overflow: auto;
 }
 
 #editPanel{

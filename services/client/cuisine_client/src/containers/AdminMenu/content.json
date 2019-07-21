@@ -9,11 +9,6 @@
             "manage": "Manage Menus",
             "create": "Create Menus",
             "modify": "Modify Menus"
-        },
-        "schedules": {
-            "manage": "Manage Schedules",
-            "create": "Create Schedules",
-            "modify": "Modify Schedules"
         }
     },
     "heb": {
@@ -26,11 +21,6 @@
             "manage": "ניהול תפריטים",
             "create": "יצירת תפריטים",
             "modify": "שינוי תפריטים"
-        },
-        "schedules": {
-            "manage": "ניהול מערכות",
-            "create": "יצירת מערכות",
-            "modify": "שינוי מערכות"
         }
     }
 }

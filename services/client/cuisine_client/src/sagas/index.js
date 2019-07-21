@@ -9,11 +9,15 @@ import {
 import {
     registerWatcher
 } from './userSagas/registerSagas';
+import {
+    itemSagas
+} from './itemSagas'
 // import watchers from other files
 export default function* rootSaga() {
     yield all([
         loginWatcher(),
-        registerWatcher()
+        registerWatcher(),
+        itemSagas()
         // add other watchers to the array
     ]);
 }

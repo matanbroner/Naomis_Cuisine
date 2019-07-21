@@ -74,7 +74,7 @@ const ItemForm = (props) => {
                             label={content.description + ' ' + content.v_english}
                             type="textarea"
                             rows={5}
-                            onChange={(v) => props.modifyFormState('description', v)}
+                            onChange={(v) => props.modifyFormState('description_eng', v)}
                             />
                         </FormCol>
                         <FormCol lang={props.language}>
@@ -83,7 +83,7 @@ const ItemForm = (props) => {
                             label={content.description + ' ' + content.v_hebrew}
                             type="textarea"
                             rows={5}
-                            onChange={(v) => props.modifyFormState('description', v)}
+                            onChange={(v) => props.modifyFormState('description_heb', v)}
                             />
                         </FormCol>
                     </FormRow>

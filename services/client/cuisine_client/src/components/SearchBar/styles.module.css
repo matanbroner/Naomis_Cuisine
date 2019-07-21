@@ -1,0 +1,16 @@
+.wrapper{
+    margin: 10px auto;
+}
+
+.wrapper > div {
+    width: 100%;
+}
+
+#wrapperHeb > div > input{
+    direction: rtl
+}
+
+#wrapperHeb > div > div{
+    direction: rtl
+}
+

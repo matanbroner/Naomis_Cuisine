@@ -1,0 +1,22 @@
+#cardWrapper{
+    margin: auto 20px;
+}
+
+#wrapper{
+    display: flex;
+}
+
+#buttonWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#singleButton{
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+#singleButton:hover{
+    color: #dbbde7;
+}

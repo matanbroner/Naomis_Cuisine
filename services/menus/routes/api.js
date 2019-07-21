@@ -1,10 +1,13 @@
 const express = require("express")
 const router = express.Router()
 
-router.use('/schedule', require('./schedule'));
-router.use('/menu', require('./menus'));
-router.use('/item', require('./items'));
+router.use('/menus', require('./menus'));
+router.use('/items', require('./items'));
 router.use('/mock', require('./mock'));
+
+router.get('/hello', (req, res) => {
+    res.status(200).json({msg: 'hello'})
+})
 
 
 module.exports = router

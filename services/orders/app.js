@@ -1,7 +1,6 @@
 const app = require("express")();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const passport = require("passport");
 require('dotenv').config()
 
 // Bodyparser middleware
@@ -14,7 +13,7 @@ app.use(
 
   // DB Config
 const db = `mongodb://mongo:${process.env.MONGO_PORT}/orders`;
-
+console.log(process.env.MONGO_USER, process.env.MONGO_PASS)
 // Connect to MongoDB
 mongoose.connect(db, {
     "auth": { "authSource": "admin" },
@@ -27,7 +26,7 @@ mongoose.connect(db, {
 
 
 // Main routes
-app.use("/api", require('./routes/main'));
+app.use("/api", require('./routes/api'));
 
 
 const port = process.env.PORT || 6500;

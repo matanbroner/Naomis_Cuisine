@@ -1,6 +1,8 @@
 import React from 'react'
 import localStyles from './styles.module.css'
 import Title from '../Title'
+import Row from 'react-bootstrap/Row'
+
 
 const TitledPanel = (props) => {
 
@@ -22,10 +24,12 @@ const TitledPanel = (props) => {
                         : 'flex-end'
                     }}
                     >
-                        <Title 
-                        main={props.title}
-                        sub={props.subtitle}
-                        dir={props.lang === 'heb' ? 'rtl' : 'ltr'}/>
+                        <Row>
+                            <Title 
+                            main={props.title}
+                            sub={props.subtitle}
+                            dir={props.lang === 'heb' ? 'rtl' : 'ltr'}/>
+                        </Row>
                     </div>
                 {props.children}
                 </div>

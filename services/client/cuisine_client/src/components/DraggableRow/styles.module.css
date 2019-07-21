@@ -1,0 +1,20 @@
+#itemsRow{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    overflow-x: scroll;
+}
+#rowWrapper{
+    border: 1px solid #d9d9d9;
+    border-bottom: 0;
+}
+#rowWrapper:first-child{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#rowWrapper:last-child{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom: 1px solid #d9d9d9;
+}

@@ -13,8 +13,15 @@ import { connect } from 'react-redux';
 import { Redirect, Route, Switch } from 'react-router-dom'
 
 import MainPanel from '../AdminPanels/MainPanel'
+
+// Items Panels
 import CreateItems from '../AdminPanels/Items/CreateItems'
 import ModifyItems from '../AdminPanels/Items/ModifyItems'
+
+// Menus Panel
+import CreateMenus from '../AdminPanels/Menus/CreateMenus'
+import ModifyMenus from '../AdminPanels/Menus/ModifyMenus'
+
 
 class AdminPage extends React.PureComponent{
     constructor(props){
@@ -34,10 +41,13 @@ class AdminPage extends React.PureComponent{
 
     content(){
         var components = [
-            <Col id={localStyles.mainContent}>
+            <Col xs={10} id={localStyles.mainContent}>
             <Route exact path={`${this.props.match.path}`} component={MainPanel}/>
             <Route path={`${this.props.match.path}/items/create`} component={CreateItems} />
             <Route path={`${this.props.match.path}/items/modify`} component={ModifyItems} />
+
+            <Route path={`${this.props.match.path}/menus/create`} component={CreateMenus} />
+            <Route path={`${this.props.match.path}/menus/modify`} component={ModifyMenus} />
             </Col>
         ]
         if (this.props.language === 'eng'){

@@ -3,11 +3,11 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const ItemSchema = new Schema({
-    names: {
+    name: {
         heb: String,
         eng: String
     },
-    descriptions: {
+    description: {
         heb: String,
         eng: String
     },
@@ -18,6 +18,9 @@ const ItemSchema = new Schema({
     serves: {
         type: Number,
         default: 1
+    },
+    type: {
+        type: String
     },
     photos: [
         String

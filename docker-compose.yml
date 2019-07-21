@@ -55,20 +55,6 @@ services:
     volumes:
       - cuisine_volume:/var/lib/db/data
 
-  frontend_content:
-    build:
-      context: ./services/frontend_content
-      dockerfile: Dockerfile.frontend
-    ports:
-      - '4000:4000'
-    environment:
-      - NODE_ENV=development
-    volumes:
-      - './services/frontend_content:/usr/src/app'
-      - '/usr/src/app/node_modules'
-    depends_on:
-      - mongo
-  
   client:
     build:
       context: ./services/client/cuisine_client
@@ -84,7 +70,6 @@ services:
       - '/usr/src/app/node_modules'
     depends_on:
       - mongo
-      - frontend_content
 
   nginx:
     build:

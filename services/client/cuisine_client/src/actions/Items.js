@@ -1,6 +1,7 @@
 import {
     SET_ITEMS_BANK,
-    APPEND_ITEMS_BANK
+    APPEND_ITEMS_BANK,
+    NEW_ITEM_WATCHER
 } from "../constants/ActionTypes"
 
 export const setItemsBank = (items) => {
@@ -16,3 +17,11 @@ export const appendItemsBank = (items) => {
         payload: items
     }
 }
+
+export const createNewItem = (item) => {
+    return {
+        type: NEW_ITEM_WATCHER,
+        payload: item
+    }
+}
+
