@@ -1,0 +1,21 @@
+#submit{
+    width: 100%;
+    height: 50px;
+    margin: 20px auto;
+    margin-bottom: 0;
+    border: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #dbbde7;
+    color: white;
+    font-size: 24px;
+    transition: background 0.5s;
+}
+
+#submit:hover{
+    background: #dba8e7;
+}
+
+#wrapper{
+    padding: 20px;
+}

@@ -2,11 +2,13 @@
     "eng": {
         "title": "Set Active Menu",
         "pickADate": "Pick a day to activate this menu",
-        "youChose": "You chose: "
+        "youChose": "You chose: ",
+        "submit": "Set Menu Active"
     },
     "heb": {
         "title": "הפעלת תפריט",
         "pickADate": "בחר/י תאריך להפעלת התפריט",
-        "youChose": "בחרת ב: "
+        "youChose": "בחרת ב: ",
+        "submit": "סיום"
     }
 }

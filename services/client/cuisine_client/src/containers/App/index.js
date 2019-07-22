@@ -5,6 +5,7 @@ import CartSidebar from '../CartSidebar'
 import NavigationBar from '../NavigationBar'
 import HomePage from '../HomePage/index'
 import MenusPage from '../MenusPage/index'
+import LoginPage from '../LoginPage/index'
 import AdminPage from '../AdminPage/index'
 
 class App extends React.Component{
@@ -16,6 +17,7 @@ class App extends React.Component{
                 <Switch>
                     <Route exact path={`/`} component={HomePage} />
                     <Route exact path={`/menu`} component={MenusPage} />
+                    <Route exact path={`/login`} component={LoginPage} />
                     <Route path={`/admin`} component={AdminPage} />
                 </Switch>
         </React.Fragment>

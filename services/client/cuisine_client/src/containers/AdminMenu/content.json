@@ -1,5 +1,6 @@
 {
     "eng": {
+        "home": "Back Home",
         "items": {
             "manage": "Manage Items",
             "create": "Create Items",
@@ -12,6 +13,7 @@
         }
     },
     "heb": {
+        "home": "Back Home",
         "items": {
             "manage": "ניהול מנות",
             "create": "יצירת מנות",

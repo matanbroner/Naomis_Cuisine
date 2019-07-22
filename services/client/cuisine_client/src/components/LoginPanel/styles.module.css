@@ -1,0 +1,130 @@
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#logoWrapper{
+    height: fit-content;
+}
+
+#logo{
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: url('../../assets/photos/logo.png');
+    margin: auto;
+    height: 200px;
+    display:block;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+#formWrapper{
+    border: 1px solid silver;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.24);
+    height: fit-content;
+    width: 30%;
+    margin: auto;
+}
+
+#formSubWrapper{
+    padding: 40px;
+}
+
+#active > a{
+    border: 1px solid #c370ce;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+    color: #c370ce;
+}
+
+.tab > a{
+    color: black;
+}
+
+.tab > a:hover{
+    border: 0;
+    color: #c370ce;
+}
+
+.form{
+    margin: 40px auto;
+}
+
+#loginForm > div > label{
+    font-weight: 500;
+}
+
+#forgotPassword{
+    margin-top: 35px;
+    font-size: 14px;
+    color: #c370ce;
+    cursor: pointer;
+}
+
+#forgotPassword:hover{
+    color: #dbbde7;
+}
+
+
+
+#buttonWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#buttonWrapperCol{
+    display: flex;
+    flex-direction: column;
+}
+
+#horizontalBreakWrapper{
+    width: 100%;
+    height: 20px; 
+    margin: 40px auto;
+    border-bottom: 1px solid #cfd4d9; 
+    text-align: center;
+}
+
+#horizontalBreakText{
+    font-size: 17px; 
+    background-color: white; 
+    padding: 0 10px;
+    color: #cfd4d9;
+}
+
+#paypalButton{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: #2d70b4;
+    padding: 12px 24px;
+    width: 100px;
+    font-size: 16px;
+    border-radius: 50px;
+    color: white;
+}
+
+#paypalButton:hover{
+    background: #3283d3;
+}
+
+#submit{
+    width: 100%;
+    height: 50px;
+    margin: 20px auto;
+    margin-bottom: 0;
+    border: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #dbbde7;
+    color: white;
+    font-size: 24px;
+    transition: background 0.5s;
+}
+
+#submit:hover{
+    background: #dba8e7;
+}

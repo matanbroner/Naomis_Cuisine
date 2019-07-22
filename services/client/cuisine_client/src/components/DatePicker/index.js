@@ -28,13 +28,6 @@ const WEEKDAYS_SHORT = {
     heb: {...LABELS.heb}
   };
 
-  const modifiersStyles = {
-        selected: {
-        color: 'white',
-        backgroundColor: '#ffc107',
-        }
-    }
-
 
   const DatePicker = (props) => {
 

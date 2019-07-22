@@ -7,6 +7,7 @@ import {
     HOME_PAGE,
     ABOUT_PAGE,
     MENUS_PAGE,
+    LOGIN_PAGE,
     ADMIN_PAGE
 } from '../../constants/Url'
 import {
@@ -43,7 +44,7 @@ class NavigationBar extends React.PureComponent{
             <Nav.Link key={routes.how_it_works} as={Link} to={HOME_PAGE}>{routes.how_it_works}</Nav.Link>,
             <Nav.Link key= {routes.menus} as={Link} to={MENUS_PAGE}>{routes.menus}</Nav.Link>,
             <Nav.Link key={routes.custom} as={Link} to={HOME_PAGE}>{routes.custom}</Nav.Link>,
-            <Nav.Link key={routes.profile} as={Link} to={HOME_PAGE}>{routes.profile}</Nav.Link>,
+            <Nav.Link key={routes.profile} as={Link} to={LOGIN_PAGE}>{routes.profile}</Nav.Link>,
             <Condition is={this.props.user.role === roles.ADMIN}>
                 <Nav.Link key={routes.admin} as={Link} to={ADMIN_PAGE}>{routes.admin}</Nav.Link>
             </Condition>

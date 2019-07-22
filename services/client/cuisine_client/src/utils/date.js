@@ -11,24 +11,24 @@ const suffixes = [
 
 export const dateFormat = (date, lang) => {
     date = new Date(date)
-    const month = MONTHS[lang][date.getMonth() - 1]
-    const day = date.getDay()
+    const month = MONTHS[lang][date.getMonth()]
+    const day = date.getDate()
     const year = date.getFullYear()
-    if (lang === 'eng'){
+    if (lang === 'eng') {
         let suffix, dayLastDigit
-        if (day < 10){
+        if (day < 10) {
             dayLastDigit = day
-        } else if (day % 10 === 0) {
+        } else if ((day % 10 === 0) || (day >= 11 && day <= 19)) {
             dayLastDigit = 9
         } else {
             dayLastDigit = day % 10
         }
-        if (dayLastDigit <= 3){
+        if (dayLastDigit <= 3) {
             suffix = suffixes[dayLastDigit - 1]
         } else {
             suffix = suffixes[3]
         }
-        return month + ' ' + date.getDay() + suffix + ', ' + year
+        return month + ' ' + day + suffix + ', ' + year
     } else {
         return day + ' ' + 'ב' + month + ', ' + year
     }

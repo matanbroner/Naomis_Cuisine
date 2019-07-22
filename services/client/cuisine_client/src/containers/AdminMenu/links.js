@@ -1,7 +1,7 @@
 import allContent from './content.json'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClipboardList, faHamburger, faCalendar } from '@fortawesome/free-solid-svg-icons' 
+import { faClipboardList, faHamburger, faHome } from '@fortawesome/free-solid-svg-icons' 
 
 const links = (lang) => {
     const content = allContent[lang]

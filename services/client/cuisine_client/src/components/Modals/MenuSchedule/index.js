@@ -4,7 +4,6 @@ import DatePicker from '../../DatePicker'
 import localStyles from './styles.module.css'
 import allContent from './content.json'
 
-
 import {
     dateFormat
 } from '../../../utils/date'
@@ -20,6 +19,9 @@ const MenuScheduleModal = (props) => {
         setRef={setRef}
         title={content.title}
         lang={props.lang}
+        submitAction={() => console.log('Modal Submit')}
+        submitContent={content.submit}
+        submitCondition={props.date}
         hideOnOverlayClicked
         >
             <div id={localStyles.wrapper} style={{

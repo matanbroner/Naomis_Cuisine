@@ -1,0 +1,14 @@
+{
+    "eng": {
+        "logIn": "Log In",
+        "register": "Register",
+        "email": "Email",
+        "password": "Password"
+    },
+    "heb": {
+        "logIn": "התחברות",
+        "register": "רישום",
+        "email": "דוא״ל",
+        "password": "סיסמה"
+    }
+}
