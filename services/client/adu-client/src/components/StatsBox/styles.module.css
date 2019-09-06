@@ -1,0 +1,36 @@
+#wrapper{
+    margin: 15px auto;
+    padding: 15px;
+    padding-left: 20px;
+    min-height: 120px;
+    border-radius: 10px;
+    color: white;
+}
+
+#icon{
+    background: white;
+    height: 80px;
+    width: 80px;
+    float: right;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    font-size: 36px;
+    margin-top: 5px;
+}
+
+
+#count{
+    font-size: 39px;
+}
+
+#title{
+    font-size: 20px;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+#context{
+    margin-bottom: 0;
+    white-space: nowrap;
+}

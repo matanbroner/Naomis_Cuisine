@@ -1,0 +1,62 @@
+
+.navbar {
+    z-index: 1;
+    min-height: 100px;
+    opacity: 1;
+    text-align: center;
+    background: #00995c;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 30px 20px 0 rgba(0,0,0,.24);
+}
+
+
+@media only screen 
+and (min-width : 1224px) {
+    .mr-auto {
+        margin: auto 15%;
+    }
+}
+
+.mr-auto>.nav-link {
+    font-size: 25px;
+    margin: auto 25px;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.dropdown, .nav-item {
+    font-size: 25px;
+    margin: auto 25px;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.24);
+}
+
+.dropdown-item{
+    width: 20vw;
+    font-size: 25px;
+    opacity: 0.7;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+#scrolledNav {
+    opacity: 0.4;
+}
+
+#navSearchBarInactive {
+    transition: visibility 0.3s;
+    visibility: hidden;
+}
+
+#navSearchBarActive {
+    visibility: visible;
+}
+
+#navLoginHeaderText {
+    margin-right: 12px;
+}

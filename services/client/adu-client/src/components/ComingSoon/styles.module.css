@@ -1,0 +1,29 @@
+@keyframes swing {
+    0%, 100% { transform: rotate(-30deg); }
+    20% {transform:scale(.95);}
+    50% { transform: rotate(30deg); }
+    80% {transform:scale(.95);}
+  }
+
+#photo {
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: url('../../assets/photos/logo.png');
+    margin: auto;
+    max-height: 350px;
+    display:block;
+    margin: 7% auto;
+    animation: swing 4s infinite ease-in-out;
+}
+
+#text{
+    font-size: 70px;
+    color: #888888;
+    opacity: 0.8;
+    font-weight: bold;
+    text-shadow: 1px 3px 5px rgba(33,14,9,0.72);
+}
+
+#colWrapper{
+    text-align: center;
+}

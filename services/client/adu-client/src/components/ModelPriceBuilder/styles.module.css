@@ -1,0 +1,112 @@
+
+
+.selectGroup{
+    display: flex;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.selectTitle{
+    white-space: nowrap;
+    line-height: 45px;
+    margin-right: 35px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 200px;
+}
+
+#explainText {
+    font-size: 18px;
+}
+
+#nextButtonWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    transition: all 400ms ease;
+}
+
+.hidden{
+    flex: 0 0 0;
+    max-width: 0;
+    opacity: 0;
+}
+
+#nextButton{
+    border: 2px solid #439661;
+    border-radius: 50px;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 23px;
+    background: none;
+    font-weight: 600;
+    color: #439661;
+    transition: all 0.2s ease;
+}
+
+#nextButton:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.24);
+}
+
+#priceCol{
+    transition: all 0.3s ease;
+}
+
+#priceWrapper{
+    margin-top: 40px;
+    line-height: 60px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#priceCylinderMain{
+    width: 100%;
+    background: #439661;
+    height: 60px;
+    border-radius: 50px;
+    padding-left: 45px;
+}
+
+#priceCylinderSub{
+    width: fit-content;
+    padding: 0 30px;
+    background: #35754d;
+    height: 60px;
+    float: right;
+    border-radius: 50px;
+    text-align: center;
+}
+
+#priceNumber{
+    margin-right: 10px;
+}
+
+#costAnalysisBody{
+    font-size: 17px;
+    line-height: 1.7;
+    padding-left: 20px;
+    margin-top: 40px;
+}
+
+.costHeader{
+    font-weight: bold;
+}
+
+.customerInfoForm{
+    width: 100%;
+    padding: 0 50px;
+}
+
+@media only screen 
+and (min-width : 1224px) {
+    .customerInfoForm{
+        width: 100%;
+        padding: 0;
+    }
+}

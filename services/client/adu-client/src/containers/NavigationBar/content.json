@@ -1,0 +1,13 @@
+{
+    "links": {
+        "home": "Home",
+        "about": "About",
+        "media": "Media Coverage",
+        "models": {
+            "title": "ADU Models",
+            "types": [
+                "ModelA420"
+            ]
+        }
+    }
+}

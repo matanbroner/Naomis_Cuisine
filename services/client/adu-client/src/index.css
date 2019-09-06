@@ -1,0 +1,21 @@
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+button:focus{
+    outline: 0;
+}
+
+::-moz-selection {
+    background: rgb(67, 150, 97);
+    color: white;
+  }
+  ::-webkit-selection {
+    background: rgb(67, 150, 97);
+    color: white;
+  }
+  ::selection {
+    background: rgb(67, 150, 97);
+    color: white;
+  }

@@ -1,0 +1,12 @@
+#formWrapper{
+    width: 100%;
+}
+
+.submitRow{
+    display: flex;
+    justify-content: center;
+}
+
+.submitButton{
+    max-width: 200px;
+}

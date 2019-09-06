@@ -1,0 +1,8 @@
+
+.graphRow{
+    padding: 30px 0;
+}
+
+.graphRow > div {
+    min-height: 400px;
+}

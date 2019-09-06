@@ -1,0 +1,66 @@
+#wrapper{
+    padding: 0 50px;
+}
+
+.estimateSquare{
+    min-height: 130px;
+    padding: 10px 20px;
+    color: white;
+}
+
+.squareTitle{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.squareCost{
+    text-align: right;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#squaresWrapper{
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
+}
+
+#buttonWrapper{
+    display: flex;
+}
+
+.button{
+    border: 1px solid #35754d;
+    background: #439661;
+    color: white;
+    height: 60%;
+    min-height: 210px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.button:hover{
+    background: rgb(53, 117, 77, 0.5);
+    transition: all 200ms ease;
+    cursor: pointer;
+}
+
+.buttonTitle{
+    font-size: 1.2em;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+#sliderRow{
+    padding: 50px;
+    padding-top: 30px;
+}
+
+#sliderTitle{
+    text-align: center;
+    width: 100%;
+    font-size: 23px;
+}

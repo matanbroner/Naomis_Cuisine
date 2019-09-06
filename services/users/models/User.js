@@ -6,7 +6,7 @@ const UserSchema = new Schema({
     name: {
         type: String,
         unique: true,
-        default: 'LU Employee'
+        default: 'ADU Employee'
     },
     username: {
         type: String,
@@ -24,13 +24,11 @@ const UserSchema = new Schema({
         type: String,
         default: 'Customer'
     },
-    isVerified:{
-        type: Boolean,
-        default: false
-    },
-    color: {
+    profilePicture: {
         type: String,
-        default: '#83ab4a'
+    },
+    refferalCode: {
+        type: String
     }
 })
 

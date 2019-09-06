@@ -1,0 +1,14 @@
+
+#wrapper {
+    margin-top: 150px;
+    padding: 0 20px;
+    min-height: 230vh;
+}
+
+@media only screen 
+and (min-width : 1224px) {
+  #wrapper{
+    padding: 0 200px;
+
+  }
+}

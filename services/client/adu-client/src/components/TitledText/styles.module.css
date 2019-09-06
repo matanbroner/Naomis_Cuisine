@@ -1,0 +1,15 @@
+
+#wrapper{
+    margin: 50px 0px 15px 0px;
+
+}
+
+#title {
+    text-align: center;
+    color: #439661;
+}
+
+#body {
+    line-height: 1.7;
+    font-size: 1.1em;
+}

@@ -1,0 +1,131 @@
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#logoWrapper{
+    height: fit-content;
+}
+
+#logo{
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: url('../../assets/photos/logo.png');
+    margin: auto;
+    height: 200px;
+    display:block;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+#formWrapper{
+    border: 1px solid silver;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.24);
+    height: fit-content;
+    width: 90%;
+    margin: auto;
+}
+
+@media only screen 
+and (min-width : 1000px) {
+    #formWrapper{
+        width: 40%;
+    }
+    
+}
+
+#formSubWrapper{
+    padding: 40px;
+}
+
+#active > a{
+    border: 1px solid #35754d;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+    color: #35754d;
+}
+
+#tabWrapper{
+    flex-wrap: nowrap;
+}
+
+.tab > a{
+    color: black;
+    font-size: 18px;
+}
+
+.tab > a:hover{
+    border: 0;
+    color: #35754d;
+}
+
+.form{
+    margin: 40px auto;
+}
+
+#loginForm > div > label{
+    font-weight: 500;
+}
+
+#forgotPassword{
+    margin-top: 35px;
+    font-size: 14px;
+    color: #35754d;
+    cursor: pointer;
+}
+
+#forgotPassword:hover{
+    color: #439661;
+}
+
+
+
+#buttonWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#buttonWrapperCol{
+    display: flex;
+    flex-direction: column;
+}
+
+#horizontalBreakWrapper{
+    width: 100%;
+    height: 20px; 
+    margin: 40px auto;
+    border-bottom: 1px solid #cfd4d9; 
+    text-align: center;
+}
+
+#horizontalBreakText{
+    font-size: 17px; 
+    background-color: white; 
+    padding: 0 10px;
+    color: #cfd4d9;
+}
+
+#submit{
+    width: 100%;
+    height: 50px;
+    margin: 20px auto;
+    margin-bottom: 0;
+    border: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #439661;
+    color: white;
+    font-size: 24px;
+    transition: background 0.5s;
+}
+
+#submit:hover{
+    background: #35754d;
+}
+
+#regCodeText{
+    text-align: center;
+}

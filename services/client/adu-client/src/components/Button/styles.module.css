@@ -1,0 +1,20 @@
+#button{
+    border: 2px solid #439661;
+    border-radius: 50px;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 23px;
+    background: none;
+    font-weight: 600;
+    color: #439661;
+    transition: all 0.1s ease;
+}
+
+#button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.24);
+    background: #439661;
+    color: white;
+}

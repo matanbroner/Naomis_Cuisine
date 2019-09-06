@@ -1,0 +1,27 @@
+
+#wrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#tabWrapper{
+    width: 100%;
+    overflow-x: scroll;
+}
+
+#active > a{
+    border: 1px solid #c370ce;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+    color: #c370ce;
+}
+
+.tab > a{
+    color: black;
+    font-size: 0.9rem;
+}
+
+.tab > a:hover{
+    border: 0;
+    color: #c370ce;
+}

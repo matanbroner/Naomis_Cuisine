@@ -1,0 +1,15 @@
+{
+    "logIn": "Log In",
+    "register": "Register",
+    "name": "Name",
+    "namePlaceholder": "Enter Your Name",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter Email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter Password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Re-enter Password",
+    "forgotPassword": "Forgot Your Password?",
+    "or": "or",
+    "paypal": "Register With PayPal"
+}
